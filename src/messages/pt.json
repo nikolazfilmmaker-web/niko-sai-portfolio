@@ -1,0 +1,32 @@
+{
+  "Navbar": {
+    "about": "SOBRE MIM",
+    "projects": "PROJETOS",
+    "contact": "CONTATO"
+  },
+  "Hero": {
+    "title": "Edição e Pós-produção Cinematográficas",
+    "subtitle": "Pós-Produção Cinemática"
+  },
+  "About": {
+    "title": "SOBRE MIM",
+    "description": "Transformo material audiovisual em conteúdo visual de alto impacto, combinando narrativa cinematográfica, correção de cor avançada e design de movimento estratégico. Ajudarei marcas pessoais e produtoras a cativar seu público desde o primeiro segundo, elevando sua imagem com profissionalismo e qualidade excepcional.",
+    "cta": "VAMOS TRABALHAR JUNTOS"
+  },
+  "Contact": {
+    "title": "CONTATO",
+    "instagram": "INSTAGRAM",
+    "whatsapp": "WHATSAPP",
+    "email": "E-MAIL / GMAIL"
+  },
+  "Projects": {
+    "tag": "PORTFÓLIO CINEMATOGRÁFICO",
+    "title": "Projetos em Destaque",
+    "subtitle": "Explore as produções, curta suas favoritas e clique para assistir em alta definição.",
+    "back": "Voltar à Galeria",
+    "views": "visualizações",
+    "likes": "curtidas",
+    "description": "Descrição",
+    "cta": "Vamos Trabalhar Juntos"
+  }
+}

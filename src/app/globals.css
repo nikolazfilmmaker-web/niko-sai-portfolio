@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Anger Styles';
+  src: url('/assets/fonts/AngerStyles.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Creamos una clase de utilidad para usar la fuente fácil */
+.font-anger {
+  font-family: 'Anger Styles', sans-serif;
+}
+
+/* Estilos base cinematográficos */
+html, body {
+  background-color: #04050a;
+  color: #ffffff;
+  overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}

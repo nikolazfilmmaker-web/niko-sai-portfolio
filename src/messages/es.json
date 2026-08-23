@@ -1,0 +1,32 @@
+{
+  "Navbar": {
+    "about": "SOBRE MÍ",
+    "projects": "PROYECTOS",
+    "contact": "CONTACTO"
+  },
+  "Hero": {
+    "title": "Edicion & Postproduccion Cinematica",
+    "subtitle": "Postproducción Cinemática"
+  },
+  "About": {
+    "title": "SOBRE MÍ",
+    "description": "Transformo material audiovisual en contenido visual de alto impacto combinando narrativa cinematográfica, corrección de color avanzada y diseño de movimiento estratégico. Ayudo a marcas personales y productoras a cautivar a su audiencia desde el primer segundo, elevando su imagen con profesionalismo y una calidad excepcional.",
+    "cta": "TRABAJEMOS JUNTOS"
+  },
+  "Contact": {
+    "title": "CONTACTO",
+    "instagram": "INSTAGRAM",
+    "whatsapp": "WHATSAPP",
+    "email": "CORREO / GMAIL"
+  },
+  "Projects": {
+    "tag": "PORTAFOLIO CINEMATOGRÁFICO",
+    "title": "Proyectos Destacados",
+    "subtitle": "Explora las producciones, dale like a tus favoritas y haz clic para ver en alta definición.",
+    "back": "Volver a la Galería",
+    "views": "vistas",
+    "likes": "likes",
+    "description": "Descripción",
+    "cta": "Trabajemos Juntos"
+  }
+}

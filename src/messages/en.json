@@ -1,0 +1,32 @@
+{
+  "Navbar": {
+    "about": "ABOUT ME",
+    "projects": "PROJECTS",
+    "contact": "CONTACT"
+  },
+  "Hero": {
+    "title": "Cinematic Editing & Postproduction",
+    "subtitle": "Cinematic Post-Production"
+  },
+  "About": {
+    "title": "ABOUT ME",
+    "description": "I transform audiovisual material into high-impact visual content combining cinematic narrative, advanced color grading, and strategic motion design. I help personal brands and production companies captivate their audience from the very first second, elevating their image with professionalism and exceptional quality.",
+    "cta": "LET'S WORK TOGETHER"
+  },
+  "Contact": {
+    "title": "CONTACT",
+    "instagram": "INSTAGRAM",
+    "whatsapp": "WHATSAPP",
+    "email": "EMAIL / GMAIL"
+  },
+  "Projects": {
+    "tag": "CINEMATIC PORTFOLIO",
+    "title": "Featured Projects",
+    "subtitle": "Explore productions, give a like to your favorites, and click to view in high definition.",
+    "back": "Back to Gallery",
+    "views": "views",
+    "likes": "likes",
+    "description": "Description",
+    "cta": "Let's Work Together"
+  }
+}
