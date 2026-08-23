@@ -11,6 +11,23 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/images/Logo.webp',
   },
+  // Metadatos para WhatsApp y Redes Sociales (Open Graph)
+  openGraph: {
+    title: 'Niko Sai | Cinematic Studio',
+    description: 'Portafolio profesional de edición y postproducción cinematográfica.',
+    url: 'https://www.nikosai.com.co',
+    siteName: 'Niko Sai Studio',
+    images: [
+      {
+        url: 'https://www.nikosai.com.co/og-image.webp', // Ruta de tu imagen en la carpeta public
+        width: 1200,
+        height: 630,
+        alt: 'Niko Sai Cinematic Studio',
+      },
+    ],
+    locale: 'es_CO',
+    type: 'website',
+  },
 };
 
 export default async function LocaleLayout({
