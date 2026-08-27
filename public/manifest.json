@@ -10,21 +10,21 @@
   "theme_color": "#04050a",
   "icons": [
     {
-      "src": "/assets/images/Logo.webp",
+      "src": "/assets/images/favic.png",
       "sizes": "192x192",
-      "type": "image/webp",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/images/Logo.webp",
+      "src": "/assets/images/favic.png",
       "sizes": "512x512",
-      "type": "image/webp",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/assets/images/Logo.webp",
+      "src": "/assets/images/favic.png",
       "sizes": "512x512",
-      "type": "image/webp",
+      "type": "image/png",
       "purpose": "maskable"
     }
   ]
