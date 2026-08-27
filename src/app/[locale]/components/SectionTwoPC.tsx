@@ -48,19 +48,19 @@ export default function SectionTwoPC() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl px-8">
             {videos.map((video) => (
-              <div 
+              <div
                 key={video.id}
                 onClick={() => setActiveVideo(video)}
                 className="group relative bg-white/[0.03] backdrop-blur-xl rounded-3xl p-3 border border-white/10 cursor-pointer shadow-[0_20px_40px_rgba(0,0,0,0.6)] hover:border-[#af926e] transition-all duration-500 hover:-translate-y-2 flex flex-col"
               >
                 <div className="relative w-full aspect-video rounded-2xl overflow-hidden bg-black mb-4">
                   <img src={video.thumbnail} alt={video.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                  
-                  <button 
+
+                  <button
                     onClick={(e) => handleLike(e, video.id)}
                     className={`absolute top-3 right-3 px-3 py-1.5 rounded-full backdrop-blur-xl border flex items-center gap-1.5 text-xs font-bold transition-all ${
-                      userLiked[video.id] 
-                        ? 'bg-rose-500/20 border-rose-500 text-rose-400' 
+                      userLiked[video.id]
+                        ? 'bg-rose-500/20 border-rose-500 text-rose-400'
                         : 'bg-black/40 border-white/20 text-white hover:bg-black/60'
                     }`}
                   >
@@ -88,15 +88,15 @@ export default function SectionTwoPC() {
           </div>
         </div>
       ) : (
-        /* VISOR GIGANTE CENTRADO + SIDEBAR A LA DERECHA */
-        <div className="w-full h-screen flex items-center justify-between animate-fadeIn pt-16">
-          
+        /* VISOR CINEMÁTICO A PANTALLA COMPLETA + SIDEBAR PEGADO AL BORDE */
+        <div className="w-full h-screen flex items-stretch animate-fadeIn">
+
           <div className="flex-grow h-full flex flex-col justify-center py-4 px-8 items-center gap-4">
-            
+
             <div className="relative w-full max-w-[1350px] aspect-video rounded-3xl overflow-hidden border border-white/15 bg-black shadow-[0_35px_80px_rgba(0,0,0,0.95)]">
-              <iframe 
-                key={activeVideo.youtubeId || activeVideo.videoUrl}
-                src={activeVideo.youtubeId ? `https://www.youtube.com/embed/${activeVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1` : activeVideo.videoUrl} 
+              <iframe
+                key={activeVideo.youtubeId}
+                src={`https://www.youtube.com/embed/${activeVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1`}
                 title={activeVideo.title}
                 className="w-full h-full border-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -105,7 +105,7 @@ export default function SectionTwoPC() {
             </div>
 
             <div className="w-full max-w-[1350px] flex items-center justify-between gap-4">
-              <button 
+              <button
                 className="text-gray-400 hover:text-white transition-colors p-2"
                 onClick={() => {
                   const currentIndex = horizontalVideos.findIndex(v => v.id === activeVideo.id);
@@ -134,7 +134,7 @@ export default function SectionTwoPC() {
               </div>
 
               <div className="flex items-center gap-3">
-                <button 
+                <button
                   className="text-gray-400 hover:text-white transition-colors p-2"
                   onClick={() => {
                     const currentIndex = horizontalVideos.findIndex(v => v.id === activeVideo.id);
@@ -145,7 +145,7 @@ export default function SectionTwoPC() {
                   <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
 
-                <button 
+                <button
                   onClick={() => setActiveVideo(null)}
                   className="p-3.5 bg-white/10 hover:bg-white/20 rounded-xl transition-colors border border-white/10 shadow-lg ml-2"
                   title="Volver a la cuadrícula"
@@ -162,14 +162,17 @@ export default function SectionTwoPC() {
 
           </div>
 
-          <div className="w-[400px] h-full flex-shrink-0 bg-white/[0.02] backdrop-blur-3xl border-l border-white/10 p-8 flex flex-col justify-between shadow-2xl rounded-l-3xl">
+          {/* SIDEBAR PEGADO AL BORDE ABSOLUTO, ALTURA COMPLETA */}
+          <div className="w-[400px] h-full flex-shrink-0 bg-white/[0.02] backdrop-blur-3xl border-l border-white/10 p-8 flex flex-col justify-between shadow-2xl">
             <div className="overflow-y-auto pr-1 scrollbar-thin flex-grow pt-4">
               <h3 className="text-2xl font-extrabold text-orange-500 tracking-wider uppercase mb-4">
                 {activeVideo.title}
               </h3>
-              
+
               <div className="flex items-center gap-2 mb-3 text-xs text-gray-400 font-bold uppercase">
-                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
                 {t('description')}
               </div>
 
@@ -197,9 +200,10 @@ export default function SectionTwoPC() {
               </div>
             </div>
 
-            <a 
-              href="https://wa.me/573196922301" 
-              target="_blank" 
+            <a
+              href="https://wa.me/573196922301"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-4 rounded-2xl bg-gradient-to-r from-orange-600 to-amber-600 text-white font-extrabold text-center tracking-wider text-sm shadow-xl shadow-orange-600/30 hover:scale-[1.02] transition-transform mt-4 flex-shrink-0"
             >
               {t('cta')}

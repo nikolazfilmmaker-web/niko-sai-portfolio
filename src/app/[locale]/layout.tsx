@@ -2,14 +2,21 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing} from '@/routing';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import '../globals.css';
 
 export const metadata: Metadata = {
   title: 'Niko Sai | Cinematic Studio',
   description: 'Portafolio profesional de edición y postproducción cinematográfica.',
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'Niko Sai',
+  },
   icons: {
     icon: '/assets/images/Logo.webp',
+    apple: '/assets/images/Logo.webp',
   },
   // Metadatos para WhatsApp y Redes Sociales (Open Graph)
   openGraph: {
@@ -28,6 +35,12 @@ export const metadata: Metadata = {
     locale: 'es_CO',
     type: 'website',
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: '#04050a',
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default async function LocaleLayout({

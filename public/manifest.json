@@ -1,0 +1,31 @@
+{
+  "name": "Niko Sai Studio",
+  "short_name": "Niko Sai",
+  "description": "Edición y Postproducción Cinematográfica - Portafolio de Niko Sai",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#04050a",
+  "theme_color": "#04050a",
+  "icons": [
+    {
+      "src": "/assets/images/Logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/Logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/Logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "maskable"
+    }
+  ]
+}

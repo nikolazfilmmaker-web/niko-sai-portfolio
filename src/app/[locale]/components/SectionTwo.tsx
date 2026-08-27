@@ -5,8 +5,8 @@ import SectionTwoPC from './SectionTwoPC';
 
 export default function SectionTwo() {
   return (
-    <section 
-      id="proyectos" 
+    <section
+      id="proyectos"
       className="relative w-full min-h-screen text-white overflow-hidden select-none scroll-smooth"
       style={{
         backgroundImage: `url('/assets/images/sec2.png')`,

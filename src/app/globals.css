@@ -30,3 +30,4 @@ section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
+.overflow-x-auto::-webkit-scrollbar { display: none; }
