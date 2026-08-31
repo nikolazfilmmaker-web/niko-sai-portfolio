@@ -20,7 +20,7 @@ export default function SectionTwoMobile() {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col md:hidden relative overflow-hidden pt-20 pb-16 px-4">
+    <div className="w-full min-h-screen flex flex-col md:hidden relative overflow-hidden pt-12 pb-16 px-4">
 
       {/* TÍTULO DE LA SECCIÓN */}
       <div className="text-center px-4 z-10 mb-8">
@@ -29,7 +29,7 @@ export default function SectionTwoMobile() {
         <p className="text-xs text-gray-400 mt-1">{t('subtitle')}</p>
       </div>
 
-      {/* CUADRÍCULA 3x3 CON MINIATURAS OFICIALES DE YOUTUBE */}
+      {/* CUADRÍCULA 3x3 CON VIDEO EN AUTOPLAY, MINIATURAS LIMPIAS SIN ÍCONO DE PLAY */}
       <div className="w-full max-w-sm mx-auto grid grid-cols-3 gap-3 px-2">
         {currentVideos.map((video) => (
           <div
@@ -37,21 +37,15 @@ export default function SectionTwoMobile() {
             onClick={() => setMobileActiveVideo(video)}
             className="group relative aspect-[9/16] bg-black rounded-2xl overflow-hidden border border-white/15 cursor-pointer shadow-xl active:scale-95 transition-transform"
           >
-            <img
-              src={video.thumbnail}
-              alt={video.title}
-              loading="lazy"
-              className="w-full h-full object-cover opacity-85 group-active:opacity-100 transition-opacity duration-300"
+            <video
+              src={video.videoUrl}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover opacity-90 group-active:opacity-100 transition-opacity duration-300"
             />
-
-            {/* Icono de Play sutil y flotante */}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-9 h-9 rounded-full bg-black/45 backdrop-blur-sm border border-white/30 flex items-center justify-center shadow-lg">
-                <svg className="w-3.5 h-3.5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
 
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent p-2 pointer-events-none">
               <span className="text-[7px] font-bold text-[#af926e] tracking-wider uppercase block truncate">{video.subtitle}</span>
@@ -96,14 +90,14 @@ export default function SectionTwoMobile() {
               </button>
             </div>
 
-            <div className="relative w-full h-[64vh] rounded-2xl overflow-hidden border border-white/15 bg-black shadow-2xl mb-4">
-              <iframe
-                key={mobileActiveVideo.youtubeId}
-                src={`https://www.youtube.com/embed/${mobileActiveVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`}
-                title={mobileActiveVideo.title}
-                className="w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+            <div className="relative w-full h-[64vh] rounded-2xl overflow-hidden border border-white/15 bg-black shadow-2xl mb-4 flex items-center justify-center">
+              <video
+                key={mobileActiveVideo.videoUrl}
+                src={mobileActiveVideo.videoUrl}
+                controls
+                autoPlay
+                playsInline
+                className="w-full h-full object-cover"
               />
             </div>
 
