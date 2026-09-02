@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     title: 'Niko Sai',
   },
   icons: {
-    icon: '/assets/images/Logo.webp',
-    apple: '/assets/images/Logo.webp',
+    icon: '/assets/images/IcoNiko.png',       // <--- Apuntando a tu nuevo icono de alta definición
+    shortcut: '/assets/images/IcoNiko.png',
+    apple: '/assets/images/IcoNiko.png',
   },
   // Metadatos para WhatsApp y Redes Sociales (Open Graph)
   openGraph: {
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     siteName: 'Niko Sai Studio',
     images: [
       {
-        url: 'https://www.nikosai.com.co/og-image.webp', // Ruta de tu imagen en la carpeta public
+        url: 'https://www.nikosai.com.co/og-image.webp', 
         width: 1200,
         height: 630,
         alt: 'Niko Sai Cinematic Studio',

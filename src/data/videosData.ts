@@ -116,5 +116,15 @@ export const videosList: VideoItem[] = [
     duration: "00:50",
     videoUrl: "https://evyniko.com/assets/videos/videos_verticales/12.mp4",
     software: ["Pr", "Ae", "DaVinci"]
+  },
+  {
+    id: "13",
+    title: "",
+    subtitle: "",
+    description: "Sincronización rítmica perfecta y efectos de luz estroboscópica.",
+    duration: "00:40",
+    videoUrl: "https://evyniko.com/assets/videos/videos_verticales/13.mp4",
+    software: ["Pr", "Ae", "DaVinci"]
   }
+  
 ];
