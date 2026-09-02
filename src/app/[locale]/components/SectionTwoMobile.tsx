@@ -7,8 +7,7 @@ import { useTranslations } from 'next-intl';
 export default function SectionTwoMobile() {
   const t = useTranslations('Projects');
 
-  const mobileVideos = videosList.filter(v => v.aspectRatio === 'vertical');
-
+  const mobileVideos = videosList;
   const [visibleCount, setVisibleCount] = useState(9);
   const [mobileActiveVideo, setMobileActiveVideo] = useState<VideoItem | null>(null);
 
